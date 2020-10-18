@@ -1,9 +1,8 @@
 const path = require('path');
 
 const withPlugins = require('next-compose-plugins');
-const withOffline = require('next-offline');
 
-const plugins = [withOffline];
+const plugins = [];
 
 if (process.env.ANALYZE === 'true') {
   const withBundleAnalyzer = require('@next/bundle-analyzer')({
