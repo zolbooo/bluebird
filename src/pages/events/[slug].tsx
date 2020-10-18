@@ -12,11 +12,9 @@ import type { Event } from '@/pages/events';
 export async function getStaticPaths() {
   const events = require('@/data/events');
   return {
-    paths: [
-      events.map(({ slug }) => ({
-        params: { slug },
-      })),
-    ],
+    paths: events.map(({ slug }) => ({
+      params: { slug },
+    })),
     fallback: false,
   };
 }
@@ -49,10 +47,12 @@ export function EventPage({ event }: { event: Event }) {
         >
           ←
         </button>
-        <article className="mt-4 mb-12 px-32 flex flex-col items-center">
-          <h2 className="text-dark-gray">{event.name}</h2>
-          <img alt={event.name} className="mt-6 w-84" src={event.picture} />
-          {/* (TODO: add description) <p className="mt-8">{event.description}</p> */}
+        <article className="mt-4 mb-12 w-full px-32 flex flex-col items-center">
+          <h2 className="text-xl font-semibold">{event.name}</h2>
+          <img alt={event.name} className="mt-6 w-1/2" src={event.picture} />
+          <p className="mt-8 w-full text-left">
+            {event.description ?? 'No information at the moment'}
+          </p>
         </article>
         <Footer className="mt-auto" />
       </div>
