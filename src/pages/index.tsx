@@ -52,23 +52,23 @@ function Home() {
       </Head>
       <IntroSection className="w-screen h-screen bg-cover flex flex-col justify-between text-white">
         <Header />
-        <div className="ml-auto mr-32 flex flex-col uppercase text-5xl font-light">
+        <div className="ml-auto mr-2 md:mr-32 flex flex-col uppercase text-3xl md:text-5xl font-light">
           <h1 className="font-semibold">Blue bird</h1>
           <h2>Contemporary</h2>
           <h2>Arts clique</h2>
         </div>
         <div />
       </IntroSection>
-      <section className="w-screen px-24 py-16 flex flex-row justify-between uppercase tracking-wide text-4xl text-white text-center font-light">
+      <section className="w-screen px-4 md:px-24 py-16 flex flex-row flex-wrap justify-between uppercase tracking-wide text-4xl text-white text-center font-light">
         <Link href="/art">
-          <a className="w-5/12 h-96">
+          <a className="mt-4 w-full md:w-5/12 h-96">
             <Art className="w-full h-full bg-cover flex justify-center items-center">
               <span>Art</span>
             </Art>
           </a>
         </Link>
         <Link href="/sound-art">
-          <a className="w-5/12 h-96">
+          <a className="mt-4 w-full md:w-5/12 h-96">
             <SoundArt className="w-full h-full bg-cover flex justify-center items-center">
               <span>
                 Sound
