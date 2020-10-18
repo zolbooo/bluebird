@@ -25,7 +25,9 @@ function Header({ className, ...props }: JSX.IntrinsicElements['header']) {
           <a className="mx-8">Projects</a>
         </Link>
       </nav>
-      <h1 className="mx-8 my-auto uppercase text-xl">Blue Bird</h1>
+      <Link href="/">
+        <a className="mx-8 my-auto uppercase text-xl">Blue Bird</a>
+      </Link>
     </header>
   );
 }
