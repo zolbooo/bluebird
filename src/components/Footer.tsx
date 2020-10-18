@@ -1,5 +1,6 @@
 import React from 'react';
 
+import mailIcon from '@/assets/mail.svg';
 import facebookIcon from '@/assets/facebook.svg';
 import instagramIcon from '@/assets/instagram.svg';
 
@@ -12,6 +13,9 @@ function Footer() {
         </a>
         <a href="https://www.instagram.com/bluebird_cac" className="ml-2">
           <img className="w-5 h-5" alt="Instagram" src={instagramIcon} />
+        </a>
+        <a href="mailto:bluebird_cac@gmail.com" className="ml-2">
+          <img className="w-5 h-5" alt="Email" src={mailIcon} />
         </a>
       </div>
       <div>{/* TODO: Add address */}</div>
