@@ -8,7 +8,7 @@ function Header({ className, ...props }: JSX.IntrinsicElements['header']) {
       className={classNames('w-full h-16 flex justify-between', className)}
       {...props}
     >
-      <nav className="flex items-center">
+      <nav className="hidden md:flex items-center">
         <Link href="/about-us">
           <a className="mx-8">About us</a>
         </Link>
