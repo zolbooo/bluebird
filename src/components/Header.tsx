@@ -8,21 +8,21 @@ function Header({ className, ...props }: JSX.IntrinsicElements['header']) {
       className={classNames('w-full h-16 flex justify-between', className)}
       {...props}
     >
-      <nav className="hidden md:flex items-center">
+      <nav className="hidden sm:flex items-center">
         <Link href="/about-us">
-          <a className="mx-8">About us</a>
+          <a className="mx-4 md:mx-8">About us</a>
         </Link>
         <Link href="/artists">
-          <a className="mx-8">Artists</a>
+          <a className="mx-4 md:mx-8">Artists</a>
         </Link>
         <Link href="/members">
-          <a className="mx-8">Members</a>
+          <a className="mx-4 md:mx-8">Members</a>
         </Link>
         <Link href="/events">
-          <a className="mx-8">Events</a>
+          <a className="mx-4 md:mx-8">Events</a>
         </Link>
         <Link href="/projects">
-          <a className="mx-8">Projects</a>
+          <a className="mx-4 md:mx-8">Projects</a>
         </Link>
       </nav>
       <Link href="/">
