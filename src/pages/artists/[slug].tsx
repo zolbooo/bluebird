@@ -59,7 +59,7 @@ export function ArtistPage({ artist }: { artist: Artist }) {
         >
           ←
         </button>
-        <article className="mt-4 mb-12 px-32 flex flex-col items-center">
+        <article className="mt-4 mb-12 px-8 md:px-32 flex flex-col items-center">
           <h2 className="text-dark-gray">{artist.name}</h2>
           <h1 className="leading-8 text-4xl font-light">{artist.nickname}</h1>
           <img alt={artist.name} className="mt-6 w-84" src={artist.picture} />

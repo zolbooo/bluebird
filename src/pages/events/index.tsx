@@ -30,7 +30,7 @@ function EventsPage({ events }: { events: Event[] }) {
           {events.map((event) => (
             <Link href="/events/[slug]" as={`/events/${event.slug}`}>
               <a>
-                <div className="w-5/12">
+                <div className="w-full md:w-5/12">
                   <img
                     className="mt-2 w-full"
                     alt={event.name}
