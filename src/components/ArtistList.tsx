@@ -3,12 +3,14 @@ import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
 
+export type GalleryItem = { type: 'youtube'; id: string };
 export type Artist = {
   slug: string;
   name: string;
   picture: string;
   nickname: string;
   description: string;
+  gallery?: GalleryItem[];
 };
 
 const ArtistGrid = styled.div`
