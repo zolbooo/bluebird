@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
 
-import { Artist } from '@/pages/art/[slug]';
+import { Artist } from '@/pages/artists/[slug]';
 
 const ArtistGrid = styled.div`
   grid-template-columns: repeat(auto-fit, 14rem);
@@ -20,7 +20,7 @@ function ArtistList({
       {...props}
     >
       {data.map((artist) => (
-        <Link href="/art/[slug]" as={`/art/${artist.slug}`}>
+        <Link href="/artists/[slug]" as={`/artists/${artist.slug}`}>
           <a className="w-56">
             <div className="w-full flex flex-col justify-center items-center">
               <img className="w-full" alt={artist.name} src={artist.picture} />

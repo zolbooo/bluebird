@@ -3,7 +3,8 @@ import React from 'react';
 
 import Header from '@/components/Header';
 import ArtistList from '@/components/ArtistList';
-import { Artist } from './[slug]';
+
+import { Artist } from '@/pages/artists/[slug]';
 
 export async function getStaticProps() {
   return { props: { artists: require('@/data/artists').art } };
