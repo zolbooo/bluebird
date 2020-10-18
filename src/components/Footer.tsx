@@ -1,12 +1,19 @@
 import React from 'react';
+import classNames from 'classnames';
 
 import mailIcon from '@/assets/mail.svg';
 import facebookIcon from '@/assets/facebook.svg';
 import instagramIcon from '@/assets/instagram.svg';
 
-function Footer() {
+function Footer({ className, ...props }: JSX.IntrinsicElements['footer']) {
   return (
-    <footer className="w-full h-32 px-8 bg-black flex flex-row justify-between items-center text-gray">
+    <footer
+      className={classNames(
+        'w-full h-32 px-8 bg-black flex flex-row justify-between items-center text-gray',
+        className,
+      )}
+      {...props}
+    >
       <div className="flex flex-row items-center">
         <a href="https://www.facebook.com/bluebird0777">
           <img className="w-5 h-5" alt="Facebook" src={facebookIcon} />
