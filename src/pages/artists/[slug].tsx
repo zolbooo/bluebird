@@ -15,10 +15,16 @@ export type Artist = {
 };
 
 export async function getStaticPaths() {
+  const artists = require('@/data/artists');
   return {
-    paths: require('@/data/artists').art.map(({ slug }) => ({
-      params: { slug },
-    })),
+    paths: [
+      artists.art.map(({ slug }) => ({
+        params: { slug },
+      })),
+      artists.soundArt.map(({ slug }) => ({
+        params: { slug },
+      })),
+    ],
     fallback: false,
   };
 }
