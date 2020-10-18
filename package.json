@@ -1,0 +1,53 @@
+{
+  "private": true,
+  "name": "app",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "NODE_ENV=development node scripts/start.js",
+    "serve": "NODE_ENV=production SERVE=true npx next start",
+    "build": "npx next build && npx next export",
+    "analyze": "ANALYZE=true npx next build"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@next/bundle-analyzer": "^9.5.3",
+    "@nicepack/eslint-ts": "^1.3.1",
+    "@svgr/webpack": "^5.4.0",
+    "@types/node": "^14.11.2",
+    "@types/react": "^16.9.50",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.3",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "core-js": "^3.6.5",
+    "eslint": "^7.10.0",
+    "http-proxy-middleware": "^1.0.5",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "next": "^9.5.5",
+    "next-optimized-images": "^2.6.2",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.1.2",
+    "prop-types": "^15.7.2",
+    "react-is": "^16.13.1",
+    "responsive-loader": "^2.1.1",
+    "sharp": "^0.26.1",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2"
+  },
+  "dependencies": {
+    "next-compose-plugins": "^2.2.0",
+    "next-offline": "^5.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.2.0",
+    "tailwindcss": "^1.8.10"
+  }
+}
