@@ -3,7 +3,13 @@ import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
 
-import { Artist } from '@/pages/artists/[slug]';
+export type Artist = {
+  slug: string;
+  name: string;
+  picture: string;
+  nickname: string;
+  description: string;
+};
 
 const ArtistGrid = styled.div`
   grid-template-columns: repeat(auto-fit, 14rem);

@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ArtistList from '@/components/ArtistList';
 
-import { Artist } from '@/pages/artists/[slug]';
+import type { Artist } from '@/components/ArtistList';
 
 export async function getStaticProps() {
   return { props: { artists: require('@/data/artists').soundArt } };

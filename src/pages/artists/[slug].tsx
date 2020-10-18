@@ -7,13 +7,7 @@ import type { GetStaticProps } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-export type Artist = {
-  slug: string;
-  name: string;
-  picture: string;
-  nickname: string;
-  description: string;
-};
+import type { Artist } from '@/components/ArtistList';
 
 export async function getStaticPaths() {
   const artists = require('@/data/artists');
