@@ -20,7 +20,7 @@ function ArtPage({ artists }: { artists: Artist[] }) {
       </Head>
       <div className="min-h-screen flex flex-col">
         <Header className="border-b border-gray" />
-        <ArtistList className="mt-8 mx-32" data={artists} />
+        <ArtistList className="mx-32 my-8" data={artists} />
         <Footer className="mt-auto" />
       </div>
     </>

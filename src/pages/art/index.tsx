@@ -17,7 +17,7 @@ function ArtPage({ artists }: { artists: Artist[] }) {
         <title>Art | Bluebird - Contemporary arts clique</title>
       </Head>
       <Header className="border-b border-gray" />
-      <ArtistList className="mt-8 mx-32" data={artists} />
+      <ArtistList className="mx-32 my-8" data={artists} />
     </>
   );
 }
