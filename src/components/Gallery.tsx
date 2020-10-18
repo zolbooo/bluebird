@@ -9,7 +9,7 @@ function Gallery({ items }: { items: GalleryItem[] }) {
       {items.map((item) => {
         switch (item.type) {
           case 'youtube':
-            return <YouTube className="my-2" videoId={item.id} />;
+            return <YouTube className="my-2 w-full" videoId={item.id} />;
           default:
             throw Error(`Unknown gallery item with type "${item.type}"`);
         }
