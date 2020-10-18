@@ -11,6 +11,7 @@ export type Event = {
   link: string;
   start: string;
   picture: string;
+  description?: string;
 };
 
 export async function getStaticProps() {
