@@ -18,10 +18,10 @@ export async function getStaticPaths() {
   const artists = require('@/data/artists');
   return {
     paths: [
-      artists.art.map(({ slug }) => ({
+      ...artists.art.map(({ slug }) => ({
         params: { slug },
       })),
-      artists.soundArt.map(({ slug }) => ({
+      ...artists.soundArt.map(({ slug }) => ({
         params: { slug },
       })),
     ],
@@ -33,11 +33,16 @@ export const getStaticProps: GetStaticProps<
   { artist: Artist },
   { slug: string }
 > = async (context) => {
+  const artists = require('@/data/artists');
   return {
     props: {
-      artist: require('@/data/artists').art.find(
-        (artist: Artist) => artist.slug === context.params.slug,
-      ),
+      artist:
+        artists.art.find(
+          (artist: Artist) => artist.slug === context.params.slug,
+        ) ??
+        artists.soundArt.find(
+          (artist: Artist) => artist.slug === context.params.slug,
+        ),
     },
   };
 };
