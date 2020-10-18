@@ -15,7 +15,10 @@
       "picture": "/assets/artists/168.png",
       "nickname": "168",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor sit amet lorem id suscipit. Curabitur a accumsan ex, vel interdum purus. Maecenas eget pretium ante. Integer id lectus diam. Duis molestie libero sit amet arcu dignissim feugiat. Nullam faucibus lacus sed malesuada egestas. Sed scelerisque vehicula ligula, non pellentesque risus bibendum vitae. Sed congue magna eu justo blandit, at viverra enim euismod. Donec arcu augue, blandit nec tempus ut, tincidunt a ligula. In pulvinar vitae urna non volutpat. Ut vel commodo nulla, id vulputate nulla. Quisque porta, ex et venenatis scelerisque, velit nulla aliquet erat, vitae vulputate nunc velit nec enim.",
-      "gallery": [{ "type": "youtube", "id": "QLSxGE9ZHIg" }]
+      "gallery": [
+        { "type": "youtube", "id": "QLSxGE9ZHIg" },
+        { "type": "youtube", "id": "xunQnGibIuA" }
+      ]
     }
   ]
 }

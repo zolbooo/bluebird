@@ -6,6 +6,7 @@ import type { GetStaticProps } from 'next';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Gallery from '@/components/Gallery';
 
 import type { Artist } from '@/components/ArtistList';
 
@@ -63,6 +64,7 @@ export function ArtistPage({ artist }: { artist: Artist }) {
           <h1 className="leading-8 text-4xl font-light">{artist.nickname}</h1>
           <img alt={artist.name} className="mt-6 w-84" src={artist.picture} />
           <p className="mt-8">{artist.description}</p>
+          {artist.gallery && <Gallery items={artist.gallery} />}
         </article>
         <Footer className="mt-auto" />
       </div>
