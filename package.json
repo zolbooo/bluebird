@@ -43,6 +43,7 @@
     "webpack": "^4.44.2"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "next-compose-plugins": "^2.2.0",
     "next-offline": "^5.0.2",
     "react": "^16.13.1",

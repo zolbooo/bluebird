@@ -42,5 +42,9 @@
   "useCallback": {
     "prefix": "ucb",
     "body": "React.useCallback(() => {$1}, []);"
+  },
+  "import classnames": {
+    "prefix": "imcn",
+    "body": "import classNames from 'classnames';"
   }
 }
