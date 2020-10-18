@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import ArtistList from '@/components/ArtistList';
 
 import { Artist } from '@/pages/artists/[slug]';
+import Footer from '@/components/Footer';
 
 export async function getStaticProps() {
   const artists = require('@/data/artists');
@@ -17,8 +18,11 @@ function ArtPage({ artists }: { artists: Artist[] }) {
       <Head>
         <title>Artists | Bluebird - Contemporary arts clique</title>
       </Head>
-      <Header className="border-b border-gray" />
-      <ArtistList className="mt-8 mx-32" data={artists} />
+      <div className="min-h-screen flex flex-col">
+        <Header className="border-b border-gray" />
+        <ArtistList className="mt-8 mx-32" data={artists} />
+        <Footer className="mt-auto" />
+      </div>
     </>
   );
 }
