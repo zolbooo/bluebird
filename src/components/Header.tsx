@@ -12,12 +12,6 @@ function Header({ className, ...props }: JSX.IntrinsicElements['header']) {
         <Link href="/about-us">
           <a className="mx-4 md:mx-8">About us</a>
         </Link>
-        <Link href="/artists">
-          <a className="mx-4 md:mx-8">Artists</a>
-        </Link>
-        <Link href="/members">
-          <a className="mx-4 md:mx-8">Members</a>
-        </Link>
         <Link href="/events">
           <a className="mx-4 md:mx-8">Events</a>
         </Link>
