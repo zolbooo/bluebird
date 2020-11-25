@@ -2,22 +2,18 @@ import Head from 'next/head';
 import React from 'react';
 
 import Header from '@/components/Header';
-import ArtistList from '@/components/ArtistList';
+import Footer from '@/components/Footer';
 
-import type { Artist } from '@/components/ArtistList';
-
-export async function getStaticProps() {
-  return { props: { artists: require('@/data/artists').art } };
-}
-
-function ArtPage({ artists }: { artists: Artist[] }) {
+function ArtPage() {
   return (
     <>
       <Head>
         <title>Art | Bluebird - Contemporary arts clique</title>
       </Head>
-      <Header className="border-b border-gray" />
-      <ArtistList className="mx-32 my-8" data={artists} />
+      <div className="min-h-screen flex flex-col">
+        <Header className="border-b border-gray" />
+        <Footer className="mt-auto" />
+      </div>
     </>
   );
 }

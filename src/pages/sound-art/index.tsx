@@ -3,15 +3,8 @@ import React from 'react';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ArtistList from '@/components/ArtistList';
 
-import type { Artist } from '@/components/ArtistList';
-
-export async function getStaticProps() {
-  return { props: { artists: require('@/data/artists').soundArt } };
-}
-
-function ArtPage({ artists }: { artists: Artist[] }) {
+function ArtPage() {
   return (
     <>
       <Head>
@@ -19,7 +12,6 @@ function ArtPage({ artists }: { artists: Artist[] }) {
       </Head>
       <div className="min-h-screen flex flex-col">
         <Header className="border-b border-gray" />
-        <ArtistList className="mx-32 my-8" data={artists} />
         <Footer className="mt-auto" />
       </div>
     </>
