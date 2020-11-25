@@ -11,7 +11,7 @@ function ArtPage() {
         <title>Sound art | Bluebird - Contemporary arts clique</title>
       </Head>
       <div className="min-h-screen flex flex-col">
-        <Header className="border-b border-gray" />
+        <Header className="border-b border-gray-300" />
         <Footer className="mt-auto" />
       </div>
     </>

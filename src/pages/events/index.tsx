@@ -25,7 +25,7 @@ function EventsPage({ events }: { events: Event[] }) {
         <title>Events | Bluebird - Contemporary arts clique</title>
       </Head>
       <div className="min-h-screen flex flex-col flex-wrap">
-        <Header className="border-b border-gray" />
+        <Header className="border-b border-gray-300" />
         <div className="mt-8 px-16 w-full">
           {events.map((event) => (
             <Link href="/events/[slug]" as={`/events/${event.slug}`}>

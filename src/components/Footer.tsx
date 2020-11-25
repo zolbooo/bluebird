@@ -9,7 +9,7 @@ function Footer({ className, ...props }: JSX.IntrinsicElements['footer']) {
   return (
     <footer
       className={classNames(
-        'w-full h-32 px-8 bg-black flex flex-row justify-between items-center text-gray',
+        'w-full h-32 px-8 bg-black flex flex-row justify-between items-center text-gray-100',
         className,
       )}
       {...props}

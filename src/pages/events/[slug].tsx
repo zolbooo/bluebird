@@ -39,7 +39,7 @@ export function EventPage({ event }: { event: Event }) {
         <title>{`${event.name} | Bluebird - Contemporary arts clique`}</title>
       </Head>
       <div className="min-h-screen flex flex-col items-start">
-        <Header className="border-b border-gray" />
+        <Header className="border-b border-gray-300" />
         <div className="mt-8 ml-4 flex flex-row items-center">
           <button type="button" className="text-2xl" onClick={router.back}>
             ←
