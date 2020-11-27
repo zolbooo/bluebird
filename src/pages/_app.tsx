@@ -1,15 +1,10 @@
 import '@/global.css';
 
-import App from 'next/app';
 import React from 'react';
 
-export default class ReactApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
-    return (
-      <>
-        <Component {...pageProps} />
-      </>
-    );
-  }
+// eslint-disable-next-line react/prop-types
+function ReactApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
 }
+
+export default ReactApp;
