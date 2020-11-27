@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Head from 'next/head';
 import React from 'react';
+import { Fragment, Image, Text, View } from 'reflit';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -19,34 +20,36 @@ export async function getStaticProps() {
 }
 
 function EventsPage({ events }: { events: Event[] }) {
-  return (
-    <>
-      <Head>
-        <title>Events | Bluebird - Contemporary arts clique</title>
-      </Head>
-      <div className="min-h-screen flex flex-col flex-wrap">
-        <Header className="border-b border-gray-300" />
-        <div className="mt-8 px-16 w-full">
-          {events.map((event) => (
-            <Link href="/events/[slug]" as={`/events/${event.slug}`}>
-              <a>
-                <div className="w-full md:w-5/12">
-                  <img
-                    className="mt-2 w-full"
-                    alt={event.name}
-                    src={event.picture}
-                  />
-                  <h3 className="block text-center text-lg font-semibold">
-                    {event.name}
-                  </h3>
-                </div>
-              </a>
-            </Link>
-          ))}
-        </div>
-        <Footer className="mt-auto" />
-      </div>
-    </>
+  return Fragment(
+    <Head>
+      <title>Events | Bluebird - Contemporary arts clique</title>
+    </Head>,
+    View(
+      { className: 'min-h-screen flex flex-col flex-wrap' },
+      Header({ className: 'border-b border-gray-300' }),
+      View(
+        { className: 'mt-8 px-16 w-full' },
+        events.map((event) => (
+          <Link href={`/events/${event.slug}`}>
+            <a>
+              {View(
+                { className: 'w-full md:w-5/12' },
+                Image({
+                  className: 'mt-2 w-full',
+                  alt: event.name,
+                  src: event.picture,
+                }),
+                Text(
+                  { className: 'block text-center text-lg font-semibold' },
+                  event.name,
+                ),
+              )}
+            </a>
+          </Link>
+        )),
+      ),
+      Footer({ className: 'mt-auto' }),
+    ),
   );
 }
 
